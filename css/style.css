@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --background-color: hsl(47, 88%, 63%);
+  --card-color: hsl(0, 0%, 100%);
+  --heading-color: hsl(0, 0%, 7%);
+  --paragraph-color: hsl(0, 0%, 42%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blog-card {
+  background: var(--card-color);
+  max-width: 26rem;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 0px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 6px 0px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 0px 1px rgba(0, 0, 0, 0.75);
+  border: 1px solid var(--heading-color);
+}
+
+.blog-card .card-image {
+  border-radius: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  height: auto;
+}
+
+.blog-card .card-header .card-tag {
+  background-color: var(--background-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.blog-card .card-header small {
+  display: block;
+  margin: 15px 0 10px 0;
+}
+
+.blog-card .card-title {
+  color: var(--heading-color);
+  font-weight: 800;
+}
+
+.blog-card .card-title:hover {
+  color: var(--background-color);
+}
+
+.blog-card .card-description {
+  margin: 10px 0 20px 0;
+  color: var(--paragraph-color);
+  font-weight: 500;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.blog-footer {
+  margin-top: 20px;
+}
+
+.blog-footer a {
+  color: var(--heading-color);
+  text-decoration: underline;
+}
+
+.blog-footer p {
+  color: var(--heading-color);
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .blog-card {
+    max-width: 21rem;
+  }
+}
